@@ -1,7 +1,6 @@
 version: "3.7"
 
 services:
-
   api:
     build:
       context: .
@@ -10,7 +9,7 @@ services:
     env_file: docker-compose.env
     environment:
       SERVICES: api
-      PORT: 3000
+      PORT: 4000
     depends_on:
       - nats
       - redis
@@ -23,14 +22,14 @@ services:
     networks:
       - internal
 
-  greeter:
+  user:
     build:
       context: .
     image: moleculer-microservice-api-template
-    container_name: moleculer-microservice-api-template-greeter
+    container_name: moleculer-microservice-api-template-user
     env_file: docker-compose.env
     environment:
-      SERVICES: greeter
+      SERVICES: user
     labels:
       - "traefik.enable=false"
     depends_on:
