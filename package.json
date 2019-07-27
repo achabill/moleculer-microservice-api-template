@@ -1,0 +1,35 @@
+{
+  "name": "moleculer-microservice-api-template",
+  "version": "1.0.0",
+  "description": "My Moleculer microservices project",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services",
+    "start": "moleculer-runner",
+    "cli": "moleculer connect NATS",
+    "dc:up": "docker-compose up --build -d",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "moleculer-repl": "^0.5.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ioredis": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "moleculer": "^0.13.0",
+    "moleculer-db": "^0.8.2",
+    "moleculer-db-adapter-mongoose": "^0.8.1",
+    "moleculer-web": "^0.8.0",
+    "mongoose": "^5.6.6",
+    "nats": "^1.0.1",
+    "swagger-ui-dist": "^3.23.1"
+  },
+  "engines": {
+    "node": ">= 8.x.x"
+  }
+}
